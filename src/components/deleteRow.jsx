@@ -10,7 +10,7 @@ export default function DeleteRow(props) {
             headers: { 'Content-Type': 'application/json' },
         };
 
-        await fetch('http://localhost:5000/coupon/deleteOne/' + coupon._id, requestOptions);
+        await fetch('http://localhost:5000/coupon/delete-one/' + coupon._id, requestOptions);
         const newListCoupons = listCoupons.filter(coup => coup._id !== coupon._id);
         setListCoupons(newListCoupons);
     }

@@ -12,7 +12,7 @@ export default function DeleteMany(props) {
         };
 
         console.log(listCheckBox);
-        const response = await fetch(`http://localhost:5000/coupon/deleteMany/${listCheckBox.join()}`, requestOptions);
+        const response = await fetch(`http://localhost:5000/coupon/delete-many/${listCheckBox.join()}`, requestOptions);
         const data = await response.json();
         console.log(data);
     }

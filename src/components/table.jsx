@@ -21,7 +21,7 @@ export default function Table(props) {
       headers: { 'Content-Type': 'application/json' },
     };
 
-    const response = await fetch('http://localhost:5000/coupon/getAll/' + (scroll - 20) + "/" + scroll, requestOptions);
+    const response = await fetch('http://localhost:5000/coupon/get-all/' + (scroll - 20) + "/" + scroll, requestOptions);
     const data = await response.json();
     if (data.length === 0) {
       setIsMore(false);

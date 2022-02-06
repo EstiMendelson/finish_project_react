@@ -7,11 +7,11 @@ export default function CreateData(props) {
     async function createData() {
 
         const requestOptions = {
-            method: 'GET',
+            method: 'POST',
             headers: { 'Content-Type': 'application/json' },
         };
 
-        const response = await fetch('http://localhost:5000/coupon/insertData', requestOptions);
+        const response = await fetch('http://localhost:5000/coupon/insert-data', requestOptions);
         const data = await response.json();
         const newList = listCoupons.concat(data);
         setListCoupons(newList);
